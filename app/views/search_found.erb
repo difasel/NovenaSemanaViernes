@@ -1,0 +1,55 @@
+<div id="div_mashup">
+  <ul id="ul_mashup">
+    <li id="image_id1" ><a  href="#"><img src="http://cdn.1001freedownloads.com/icon/thumb/33/cross-24-512.png" height="20px" width="20px"></a></li>
+    <li id ="image_id2" ><a  href="#"><img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" height="20px" width="20px"></a></li>
+    <li><a href="/mashups/home">Us</a></li>
+    <li><a href="/mashups">Home</a></li> 
+    <li><a href="/mashups/new">Create</a></li>
+    <li><a href="/mashups/search">Search</a></li>
+    <li><a href="/logout">Log Out</a></li>
+  </ul>
+  <br clear="all">
+</div>
+
+<div class="container_mashup_search">
+  <header>
+    <img id="logo" src="/img/LogoMashup.png">
+  </header>
+
+  <div class="content_mashup_list">
+
+    <div id="table_mashup">
+      <h1 style="text-align:center"><%=@mashup.category%></h1>
+      <h2 style="text-align:center"><%=@mashup.title%></h2>
+
+      <table id="table">
+        <tr>
+          <th><%=@mashup.option_1%></th>
+          <th><%=@mashup.option_2%></th>
+        </tr>
+        <tr id="image">
+          <td><img  width="200px" src="<%=@mashup.image_1%>"></td>
+          <td><img  width="200px" src="<%=@mashup.image_2%>"></td>
+        </tr>
+        <tr id="upvote_downvote">
+          
+          <td><a id="button_vote_1" class="button_vote" href="/upvote/<%=@mashup.option_1%>/?num_option=1">Up Vote</a></td>
+          <td><a id="button_vote_2" class="button_vote" href="/upvote/<%=@mashup.option_2%>/?num_option=2">Up Vote</a></td>
+
+        </tr>
+        <tr id="votes">
+          <td><b>Votes: <%=@mashup.votes_1%><b></td>
+          <td><b>Votes: <%=@mashup.votes_2%><b></td>
+        </tr>
+      </table><br><br>
+    </div>
+
+  </div><br><br><br>
+
+  <div class="footer">
+    Derechos &copy; 2015 Lorem S.A. de C.V
+  </div>
+  
+</div>
+  
+    

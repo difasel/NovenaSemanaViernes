@@ -1,0 +1,58 @@
+<!-- Barra Menu --> 
+
+<div id="div_mashup">
+      <ul id="ul_mashup">
+        <li id="image_id1" ><a  href="#"><img src="http://cdn.1001freedownloads.com/icon/thumb/33/cross-24-512.png" height="20px" width="20px"></a></li>
+        <li id ="image_id2" ><a  href="#"><img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" height="20px" width="20px"></a></li>
+        <li><a href="/mashups/home">Us</a></li>
+        <li><a href="/mashups">Home</a></li> 
+        <li><a href="/mashups/new">Create</a></li>
+        <li><a href="/mashups/search">Search</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+      <br clear="all">
+    </div>
+
+<!-- Forma Mashup -->
+
+<img id="logo" src="/img/LogoMashup.png">
+<form id="create_form" action="/mashups/create" method="post">
+  <input class="category" style="text-align: center" list="categories" name="categories" placeholder="Choose category">
+    <datalist id="categories" >
+      <option value="Technology">
+      <option value="Cars">
+      <option value="Cities">
+      <option value="Services">
+      <option value="Brands">
+    </datalist><br><br>
+  <input id="title" type="text" name="title" placeholder="Mashup Title"><br><br>
+  <table id="table">
+    <tr>
+      <th>Option 1</th>
+      <th>Option 2</th>
+    </tr>
+    <tr id="image">
+      <td><span id="image_1">Image 1</span></td>
+      <td><span id="image_2">Image 2</span></td>
+    </tr>
+    <tr id="image_text">
+      <td>        
+        <form id="search_1" action="/search_img" method="post">
+          <input id="option_1" type="text" name="option_1" placeholder="Option 1">
+          <input id="submit_1" class="search_svg" type="submit" value="">
+        </form>
+      </td>
+      <td>
+        <form id="search_2" action="/search_img" method="post">
+          <input id="option_2" type="text" name="option_2" placeholder="Option 2">
+          <input id="submit_2" class="search_svg" type="submit" value="">
+        </form>
+      </td>
+    </tr> 
+  </table><br><br>
+  <input id="submit_form" type="submit" value="Create Mashup">
+</form>
+
+
+
+

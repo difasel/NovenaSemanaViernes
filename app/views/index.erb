@@ -1,0 +1,47 @@
+ <div id = "content_index">
+ <img id="logo" src="/img/LogoMashup.png">
+ <% if @message_login %>
+  <p style="color:green, text-align: center">User correctly registered</p>
+  <%@message_login = false%>
+  <%end%>
+   <%if @message_logout%>
+  <p style="color:red">Logged out correctly</p>
+  <%@message_logout = false%>
+  <%end%>
+  <%=@error_message%>
+  <center><b style="color:black; font-size:0.7em" >The site that helps you find the best choice.</b></center><br><br>
+
+ <% if logged_in? %>
+
+ <div id="login_user">
+   
+   <form action="/logout" method="get">
+    <b style="color:black text-shadow: 2px 2px black">Logout</b><br><br>
+    <input  class="button" type="submit" name="logut" value="Logout"><br><br>
+  </form>
+  <form action="/mashups/home" method="get">  
+    <b style="color:black">Mashups</b><br><br>
+    <input class="button" type="submit" name="mashups" value="Mashups"><br><br>
+  </form>
+ </div>
+
+ <% else %>
+ <div id="login_credentials">
+   <form action="/register" method="post">
+    <b style="color:black text-shadow: 2px 2px black">Register</b><br><br>
+    <input type="text" name="name" placeholder="Name"><br>
+    <input type="text" name="email" placeholder="Email"><br>
+    <input type="password" name="password" placeholder="Password"><br><br>
+    <input class="button" type="submit" name="register" value="Register"><br><br>
+  </form>
+  <form action="/login" method="post">  
+    <b style="color:black">Log In</b><br><br>
+    <input type="text" name="email" placeholder="Email"><br>
+    <input type="password" name="password" placeholder="Password"><br><br>
+    <input class="button" type="submit" name="login" value="Log in"><br><br>
+  </form>
+ </div>
+
+  <% end %>
+
+  </div>
